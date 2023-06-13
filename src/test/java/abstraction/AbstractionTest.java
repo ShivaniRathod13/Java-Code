@@ -1,8 +1,9 @@
 package abstraction;
 
-import Abstraction.Circle;
-import Abstraction.Draw;
-import Abstraction.Rectangle;
+
+import com.oops.Abstraction.Circle;
+import com.oops.Abstraction.Draw;
+import com.oops.Abstraction.Rectangle;
 import org.testng.annotations.Test;
 
 import static org.junit.Assert.assertEquals;

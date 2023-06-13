@@ -1,8 +1,9 @@
 package inheritance;
 
-import Inheritance.Bicycle;
-import Inheritance.MountainBike;
-import Inheritance.RoadBike;
+
+import com.oops.Inheritance.Bicycle;
+import com.oops.Inheritance.MountainBike;
+import com.oops.Inheritance.RoadBike;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

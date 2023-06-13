@@ -1,8 +1,10 @@
 package encapsulation;
 
+import com.oops.encapsulation.Company;
+import com.oops.encapsulation.Employee;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class EncapsulationTest {
 
@@ -14,7 +16,8 @@ public class EncapsulationTest {
         emp.setId(101);
         emp.setName("shivi");
         emp.setEmail("shivi@gmail.com");
-        assertEquals(104,emp.getId());
+//        assertEquals(104,emp.getId());
+        assertTrue(emp.getId()==101);
 
     }
 
