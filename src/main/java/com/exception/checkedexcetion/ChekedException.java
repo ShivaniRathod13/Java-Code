@@ -13,14 +13,16 @@ public class ChekedException {
             pw.println("xyz");
         }catch (FileNotFoundException e){
 
+
+            e.printStackTrace();
             return e.getMessage();
 
         }
-        return ""+pw;
+        return "successfully";
     }
 
     public static void main(String[] args) {
         ChekedException chekedException = new ChekedException();
-        chekedException.fileNotFoundException("/jtp.txt");
+        chekedException.fileNotFoundException("C:/jtp.txt");
     }
 }

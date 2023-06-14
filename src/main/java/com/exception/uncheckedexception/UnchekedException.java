@@ -2,7 +2,13 @@ package com.exception.uncheckedexception;
 
 public class UnchekedException {
 
-    
+    public int divide(int a, int b){
+        return a/b;
+    }
+
+    public int getChartAtIndex(String input,int index){
+        return input.charAt(index);
+    }
     public String arrayOutOfBoundsException(int arr[]) {
 
         int i;
