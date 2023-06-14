@@ -7,7 +7,7 @@ class Bank{
 class SBI extends Bank{
 
     @Override
-    int interest() {
+    public int interest() {
         return 8;
     }
 }
