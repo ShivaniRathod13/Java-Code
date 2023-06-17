@@ -1,31 +1,24 @@
 package com.exception.checkedexcetion;
 
-import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.util.Optional;
 
 public class ThorwsExample {
 
-    public static void method() throws FileNotFoundException {
-
-        FileReader file = new FileReader("C:/abc.txt");
-
-        throw new FileNotFoundException();
-
+    public static Optional<File> method(String filePath) throws FileNotFoundException {
+        File file = new File(filePath);
+        if (file.exists()) {
+            return Optional.of(file);
+        } else {
+            return Optional.empty();
+        }
     }
 
-    public static void main(String args[]){
-
-        try
-        {
-            method();
-        }
-        catch (FileNotFoundException e)
-        {
-            e.printStackTrace();
-        }finally {
-            System.out.println("finished");
-        }
+    public static void main(String args[]) {
+//        if(method("c:\text.t")){
+//
+//        }
 
     }
 

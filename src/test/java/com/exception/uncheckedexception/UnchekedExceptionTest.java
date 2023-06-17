@@ -3,7 +3,10 @@ package com.exception.uncheckedexception;
 
 import org.junit.Test;
 
+import java.util.Optional;
+
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class UnchekedExceptionTest {
 
@@ -13,7 +16,30 @@ public class UnchekedExceptionTest {
     public void should_return_character_At_passed_index(){
         assertEquals('c',new UnchekedException().getChartAtIndex("abcd",2));
     }
+    @Test
+    public void should_return_optional_character_At_passed_index(){
+        Optional<Character> optionalChartAtIndex= new UnchekedException().getOptionalChartAtIndex("abcd", 2);
+        assertTrue(optionalChartAtIndex.isPresent());
+        assertEquals('c',(char) optionalChartAtIndex.get());
 
+    }
+    @Test
+    public void should_return_string_length()
+    {
+
+        assertEquals(5,new UnchekedException().nullPointer("shivi"));
+    }
+    @Test(expected = NullPointerException.class)
+    public void should_throw_null_pointer_exception(){
+       new UnchekedException().nullPointer(null);
+
+    }
+
+    @Test
+    public void should_return_empty_optional_character_At_passed_index(){
+        Optional<Character> optionalChartAtIndex = new UnchekedException().getOptionalChartAtIndex("abcd", 4);
+        assertTrue(optionalChartAtIndex.isEmpty());
+    }
     @Test(expected = StringIndexOutOfBoundsException.class)
     public void should_throw_string_index_out_of_bound_exception() {
         new UnchekedException().getChartAtIndex("ab", 2);

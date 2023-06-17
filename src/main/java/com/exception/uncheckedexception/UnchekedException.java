@@ -1,5 +1,7 @@
 package com.exception.uncheckedexception;
 
+import java.util.Optional;
+
 public class UnchekedException {
 
     public int divide(int a, int b){
@@ -8,6 +10,19 @@ public class UnchekedException {
 
     public int getChartAtIndex(String input,int index){
         return input.charAt(index);
+    }
+
+
+    public Optional<Character>getOptionalChartAtIndex(String input,int index){
+       try {
+           return Optional.of(input.charAt(index));
+       }catch (Exception e){
+         return Optional.empty();
+
+       }
+    }
+    public int nullPointer(String name){
+        return name.length();
     }
     public String arrayOutOfBoundsException(int arr[]) {
 
