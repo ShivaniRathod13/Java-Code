@@ -9,6 +9,7 @@ public class StringBufferExample {
 //        System.out.println(ab.capacity());
        // stringBufferExample.returncapacityString();
        stringBufferExample.getOptionalReturnAppend();
+      // StringExample.equalsString();
 
 
 
@@ -36,7 +37,7 @@ public class StringBufferExample {
         StringBuffer s1 =new StringBuffer("Hello ");
 //        s1.append("Java");
 //
-     //  System.out.println(s1.append("java"));
+//       System.out.println(s1.append("java"));
         return Optional.of(s1.append("java"));
 
 
@@ -53,10 +54,11 @@ public class StringBufferExample {
         }
     }
 
-    public  void equalsString(){
+    public Optional<Boolean> equalsString(){
         StringBuffer sb1 = new StringBuffer("Hello java");
         StringBuffer sb2 = new StringBuffer("Hello java");
         System.out.println(sb1.equals(sb2));
+        return Optional.of(sb1.equals(sb2));
     }
    public void insertString(){
         StringBuffer sb = new StringBuffer("Hello ");
