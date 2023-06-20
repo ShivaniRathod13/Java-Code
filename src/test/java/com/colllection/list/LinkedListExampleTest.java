@@ -26,7 +26,7 @@ public class LinkedListExampleTest  {
     @Test
     public void test2()
     {
-            assertEquals(true,list.addAll(Arrays.asList("Mohit","Singh","Rajput")) );
+            assertEquals(true,list.addAll(Arrays.asList("Harshit","somay","john")) );
             System.out.println(list);
     }
     @Test
