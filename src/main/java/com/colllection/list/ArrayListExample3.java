@@ -24,6 +24,7 @@ public class ArrayListExample3 {
         al.add(s1);//adding Student class object  
         al.add(s3);
         al.add(s3);
+        System.out.println(al.toString());
         //Getting Iterator  
         Iterator itr = al.iterator();
 
