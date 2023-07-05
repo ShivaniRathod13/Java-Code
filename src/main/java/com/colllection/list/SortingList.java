@@ -18,7 +18,7 @@ public class SortingList {
 //        System.out.println("Before sorting list:");
 //        System.out.println(list);
         Collections.sort(list);
-      //  System.out.println("after sorting list:");
+       // System.out.println("after sorting list:"+list);
         return list;
 
 
